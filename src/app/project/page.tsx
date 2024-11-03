@@ -7,6 +7,10 @@ import { Input } from "@/components/ui/input"
 import { Search } from "lucide-react"
 import { projects } from '@/lib/data'
 
+/**
+ * Renders the Projects component, which displays a list of projects with search functionality.
+ * @returns {JSX.Element} A React component that renders a searchable list of projects.
+ */
 export default function Projects() {
   const [searchTerm, setSearchTerm] = useState('')
 
