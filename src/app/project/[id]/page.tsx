@@ -12,6 +12,14 @@ import KnowledgeBank from '@/components/project/KnowledgeBank'
 interface ProjectDetailProps {
   params: { id: string }
 }
+/**
+ * Renders the detail page for a project, including tabs for different project sections.
+ * @param {Object} props - The component props.
+ * @param {Object} props.params - The route parameters.
+ * @param {string} props.params.id - The project ID from the route.
+ * @returns {JSX.Element} A React component displaying the project details and interactive tabs.
+ * @throws {Error} Throws a 'not found' error if the project doesn't exist.
+ */
 export default function ProjectDetail({ params }: ProjectDetailProps) {
   const [activeTab, setActiveTab] = useState('docs')
   const projectId = parseInt(params.id)
