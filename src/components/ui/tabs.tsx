@@ -10,6 +10,13 @@ const Tabs = TabsPrimitive.Root
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
+/**
+ * Renders a styled list container for tabs.
+ * @param {Object} props - The component props.
+ * @param {string} [props.className] - Additional CSS class names to apply to the list.
+ * @param {React.Ref} ref - The forwarded ref for the underlying DOM element.
+ * @returns {JSX.Element} A styled TabsPrimitive.List component.
+ */
 >(({ className, ...props }, ref) => (
   <TabsPrimitive.List
     ref={ref}
@@ -25,6 +32,13 @@ TabsList.displayName = TabsPrimitive.List.displayName
 const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
+/**
+ * Renders a customizable tab trigger component with specific styling and behavior.
+ * @param {Object} props - The properties passed to the component.
+ * @param {string} props.className - Additional CSS classes to apply to the component.
+ * @param {React.Ref} ref - A ref object to access the underlying DOM element.
+ * @returns {React.ReactElement} A styled and interactive tab trigger component.
+ */
 >(({ className, ...props }, ref) => (
   <TabsPrimitive.Trigger
     ref={ref}
@@ -40,6 +54,13 @@ TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
 const TabsContent = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
+/**
+ * Renders a tab content component with custom styling and accessibility features.
+ * @param {Object} props - The props object containing className and other properties.
+ * @param {string} props.className - Additional CSS class names to apply to the component.
+ * @param {React.Ref} ref - A ref to be forwarded to the underlying DOM element.
+ * @returns {React.Element} A styled TabsPrimitive.Content component.
+ */
 >(({ className, ...props }, ref) => (
   <TabsPrimitive.Content
     ref={ref}
