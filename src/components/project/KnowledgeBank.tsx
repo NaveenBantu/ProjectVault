@@ -10,6 +10,12 @@ interface KnowledgeBankProps {
   projectId: number;
 }
 
+/**
+ * Renders a knowledge bank component with searchable issues
+ * @param {Object} props - The component props
+ * @param {string} props.projectId - The ID of the project
+ * @returns {JSX.Element} A div containing a search input and a list of filtered issue cards
+ */
 export default function KnowledgeBank({ projectId }: KnowledgeBankProps) {
   const [searchTerm, setSearchTerm] = useState('')
 
