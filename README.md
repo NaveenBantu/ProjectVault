@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Vault Documentation
 
-## Getting Started
+This project is a Next.js application for managing projects and their associated knowledge resources. It provides features for organizing project documentation, diagrams, timelines, and a knowledge base of common issues and solutions.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* **Project Management:** Create and manage projects with descriptions. Projects are displayed on the dashboard and can be searched.
+* **Documentation:** Write and edit project documentation using a Markdown editor.
+* **Diagrams:** Create and preview diagrams using a Mermaid.js editor.
+* **Timeline:** Visualize project milestones and events with a timeline.
+* **Knowledge Base:** Store and search common issues and their solutions, tagged for easy filtering.
+* **Theme Toggle:** Switch between light and dark themes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Inputs
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Project Creation:** Project name and description.
+* **Markdown Editor:** Markdown text.
+* **Mermaid Editor:** Mermaid.js code.
+* **Timeline:** Project timeline events (date, title, description, status).
+* **Knowledge Base:** Issue title, solution, and tags.
+* **Search:** Search term for filtering projects, issues, etc.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Outputs
 
-## Learn More
+* **Dashboard:** List of project cards.
+* **Project Detail Page:** Project name, description, and tabs for documents, diagrams, timeline, and knowledge base.
+* **Markdown Editor:** Rendered Markdown content.
+* **Mermaid Editor:** Rendered diagram preview.
+* **Timeline:** Interactive timeline of events.
+* **Knowledge Base:** Searchable and filtered list of issues and solutions.
 
-To learn more about Next.js, take a look at the following resources:
+## How to Use
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Create a new project:** Provide a project name and description.
+2. **Navigate to a project:** From the dashboard or projects list, click on a project card.
+3. **Manage documentation:** Use the Markdown editor to create and edit project documentation.
+4. **Create diagrams:** Create flowcharts and other diagrams using Mermaid.js in the diagram editor.
+5. **Track project timeline:** Add and visualize project events on the interactive timeline.
+6. **Build a knowledge base:**  Document common issues and solutions with relevant tags in the knowledge bank.
+7. **Toggle theme:** Switch between light and dark mode using the theme toggle button in the sidebar.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
