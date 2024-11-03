@@ -4,6 +4,12 @@ import { useState } from 'react'
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 
+/**
+ * Renders a Mermaid diagram editor and preview component.
+ * This function creates a two-column layout with an editable textarea for Mermaid diagram code
+ * and a preview section to display the diagram.
+ * @returns {JSX.Element} A React component with a Mermaid diagram editor and preview
+ */
 export default function MermaidEditor() {
   const [diagram, setDiagram] = useState(`graph TD
     A[Start] --> B{Is it working?}
