@@ -5,6 +5,12 @@ interface ProjectTimelineProps {
   projectId: number;
 }
 
+/**
+ * Renders a project timeline component with events displayed as timeline items.
+ * @param {Object} props - The component props.
+ * @param {string} props.projectId - The ID of the project for which the timeline is being rendered.
+ * @returns {JSX.Element} A Timeline component containing TimelineItems for each event in the project.
+ */
 export default function ProjectTimeline({ projectId }: ProjectTimelineProps) {
   return (
     <Timeline>

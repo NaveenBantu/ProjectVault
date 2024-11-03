@@ -2,6 +2,10 @@ import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { projects } from '@/lib/data'
 
+/**
+ * Renders the Dashboard component displaying a grid of project cards
+ * @returns {JSX.Element} A React component representing the dashboard with project cards
+ */
 export default function Dashboard() {
   return (
     <div className="container mx-auto p-4">

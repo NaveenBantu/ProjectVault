@@ -13,6 +13,12 @@ const navigation = [
   { name: "Settings", href: "/settings", icon: Settings },
 ]
 
+/**
+ * Renders a sidebar component for the Projects Vault application.
+ * This component includes a title, theme toggle, and navigation links.
+ * It uses the current pathname to highlight the active navigation item.
+ * @returns {JSX.Element} A JSX element representing the sidebar
+ */
 export function Sidebar() {
   const pathname = usePathname()
 

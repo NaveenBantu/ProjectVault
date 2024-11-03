@@ -6,6 +6,10 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
+/**
+ * Renders the Settings page component
+ * @returns {JSX.Element} A React component that displays the Settings page
+ */
 export default function SettingsPage() {
   return (
     <div className="container mx-auto p-6">
