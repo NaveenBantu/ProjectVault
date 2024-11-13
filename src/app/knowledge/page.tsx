@@ -5,6 +5,7 @@ import { Input } from "../../components/ui/input"
 import { Badge } from "../../components/ui/badge"
 import { Search, ChevronRight } from "lucide-react"
 import { issues } from '../../lib/data'
+import Link from 'next/link'
 
 interface KnowledgeBankProps {
   projectId: number;
@@ -37,31 +38,32 @@ export default function KnowledgeBank({ projectId }: KnowledgeBankProps) {
 
       <div className="divide-y divide-border rounded-lg border bg-card">
         {filteredIssues.map(issue => (
-          <div 
-            key={issue.id} 
-            className="group flex items-start justify-between p-4 hover:bg-muted/50"
-          >
-            <div className="flex-1 space-y-2">
-              <div className="flex items-center gap-2">
-                <ChevronRight className="h-4 w-4 text-muted-foreground" />
-                <h3 className="font-medium">{issue.title}</h3>
-              </div>
-              <p className="text-sm text-muted-foreground pl-6">
-                {issue.solution}
-              </p>
-              <div className="flex flex-wrap gap-2 pl-6">
-                {issue.tags?.map(tag => (
-                  <Badge 
-                    key={tag} 
-                    variant="secondary"
-                    className="text-xs"
-                  >
-                    {tag}
-                  </Badge>
-                ))}
+          <Link href={`/knowledge/${issue.id}`} key={issue.id}>
+            <div 
+              className="group flex items-start justify-between p-4 hover:bg-muted/50 cursor-pointer"
+            >
+              <div className="flex-1 space-y-2">
+                <div className="flex items-center gap-2">
+                  <ChevronRight className="h-4 w-4 text-muted-foreground" />
+                  <h3 className="font-medium">{issue.title}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground pl-6">
+                  {issue.solution}
+                </p>
+                <div className="flex flex-wrap gap-2 pl-6">
+                  {issue.tags?.map(tag => (
+                    <Badge 
+                      key={tag} 
+                      variant="secondary"
+                      className="text-xs"
+                    >
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

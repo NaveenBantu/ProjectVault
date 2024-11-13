@@ -35,7 +35,7 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
         </TabsList>
 
         <TabsContent value="docs" className="p-4 border rounded-lg">
-          <MarkdownEditor />
+          {/* <MarkdownEditor value={project.docs} onChange={() => {}} /> */}
         </TabsContent>
         <TabsContent value="diagrams" className="p-4 border rounded-lg">
           <MermaidEditor />
